@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BlackJack3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackJack Logo" translatesAutoresizingMaskIntoConstraints="NO" id="OLV-X9-UIE">
+                                <rect key="frame" x="20" y="20" width="374" height="128"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n1Y-Dt-q3t">
+                                <rect key="frame" x="53.5" y="301.5" width="307.5" height="239"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZJ-HE-ZSM">
+                                        <rect key="frame" x="0.0" y="0.0" width="307.5" height="73"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Enter Starting Amount">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="31" name="Impact"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <color key="highlightedColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number (100+)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fun-13-VOg">
+                                        <rect key="frame" x="0.0" y="83" width="307.5" height="73"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="StartAmountTextField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="6E2-PN-u8y"/>
+                                            <action selector="TextFieldParameters:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ROf-bT-4Ji"/>
+                                        </connections>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sxb-Qw-Fve">
+                                        <rect key="frame" x="0.0" y="166" width="307.5" height="73"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whb-lb-vmA" userLabel="EnterButton">
+                                                <rect key="frame" x="0.0" y="0.0" width="144.5" height="73"/>
+                                                <state key="normal" image="EnterButton">
+                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="EnterStartAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rFs-gB-VH1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMR-4T-Zbo" userLabel="ResetButton">
+                                                <rect key="frame" x="144.5" y="0.0" width="163" height="73"/>
+                                                <state key="normal" image="ResetButton"/>
+                                                <connections>
+                                                    <action selector="ResetStartAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHc-9k-K4Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Starting Amount: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-BH-0W5">
+                                <rect key="frame" x="66" y="645.5" width="208.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="highlightedColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTn-tE-e5F">
+                                <rect key="frame" x="66" y="680" width="282" height="108"/>
+                                <state key="normal" title="DealMeInButton" image="DealMeInButton"/>
+                                <connections>
+                                    <action selector="DealMeInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iVX-XN-el2"/>
+                                    <segue destination="pJh-rD-6WV" kind="show" identifier="DealInConnector" id="Cs9-cB-JpP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="gTn-tE-e5F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="40r-4v-y4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTn-tE-e5F" secondAttribute="trailing" constant="66" id="4IO-lk-t63"/>
+                            <constraint firstItem="OLV-X9-UIE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6xO-7W-BvM"/>
+                            <constraint firstItem="n1Y-Dt-q3t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CqC-Pn-dqT"/>
+                            <constraint firstItem="B5Y-BH-0W5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="FjP-X6-c3e"/>
+                            <constraint firstItem="OLV-X9-UIE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a1d-c3-51h"/>
+                            <constraint firstItem="gTn-tE-e5F" firstAttribute="top" secondItem="B5Y-BH-0W5" secondAttribute="bottom" constant="10" id="eXk-wQ-g2R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gTn-tE-e5F" secondAttribute="bottom" constant="20" id="ke0-Em-1Gx"/>
+                            <constraint firstItem="n1Y-Dt-q3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="osk-P7-Pq6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OLV-X9-UIE" secondAttribute="trailing" constant="20" id="uLk-Xc-cWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t5a-BM-xBF"/>
+                    <connections>
+                        <outlet property="StartValueLabel" destination="B5Y-BH-0W5" id="fKy-yJ-OYL"/>
+                        <outlet property="TextField" destination="fun-13-VOg" id="JBg-We-lP2"/>
+                        <segue destination="pJh-rD-6WV" kind="show" identifier="Screen Connector" id="ylb-KV-NZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="tyl-e4-HGp">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="pJh-rD-6WV" customClass="SecondViewController" customModule="BlackJack3_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vgo-6Z-xlC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFd-AU-5rb">
+                                <rect key="frame" x="313" y="832" width="81" height="30"/>
+                                <state key="normal" title="Leave Table"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="LeaveTableConnector" id="y1W-x6-hHs"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uDO-Ub-CX6" userLabel="TopChipStack">
+                                <rect key="frame" x="45" y="674" width="324" height="78"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDF-8h-qYw" userLabel="1chip">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="78"/>
+                                        <state key="normal" title="Button" image="bet1"/>
+                                        <connections>
+                                            <action selector="bet1Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="azw-gf-CDp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-GH-V1Y" userLabel="5chip">
+                                        <rect key="frame" x="108" y="0.0" width="108" height="78"/>
+                                        <state key="normal" title="Button" image="bet5"/>
+                                        <connections>
+                                            <action selector="bet5Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="MBh-2J-9he"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Q-x1-H4U" userLabel="10chip">
+                                        <rect key="frame" x="216" y="0.0" width="108" height="78"/>
+                                        <state key="normal" title="Button" image="bet10"/>
+                                        <connections>
+                                            <action selector="bet10Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="RGb-Z0-gZl"/>
+                                            <action selector="bet5Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="idj-fI-9pb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uWe-8h-6fI" userLabel="BottomChipStack">
+                                <rect key="frame" x="45" y="757" width="324" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UX5-ti-x2c" userLabel="20chip">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="65"/>
+                                        <state key="normal" title="Button" image="bet20"/>
+                                        <connections>
+                                            <action selector="bet20Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="4ax-1Z-G7S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKW-Bs-eLL" userLabel="50chip">
+                                        <rect key="frame" x="108" y="0.0" width="108" height="65"/>
+                                        <state key="normal" title="Button" image="bet50"/>
+                                        <connections>
+                                            <action selector="bet50Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="rKt-pn-XML"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0K-CG-FQi" userLabel="100chip">
+                                        <rect key="frame" x="216" y="0.0" width="108" height="65"/>
+                                        <state key="normal" title="Button" image="bet100"/>
+                                        <connections>
+                                            <action selector="bet100Button:" destination="pJh-rD-6WV" eventType="touchUpInside" id="9uk-YF-351"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="g0x-mb-7QR" userLabel="CardsVertStack">
+                                <rect key="frame" x="20" y="80" width="374" height="380"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4w3-EH-Ng7" userLabel="DealerStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="155"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CK3-Fr-TnU" userLabel="DealerCard1">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-to-bde" userLabel="DealerCard2">
+                                                <rect key="frame" x="75" y="0.0" width="74.5" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRx-IZ-1Es" userLabel="DealerCard3">
+                                                <rect key="frame" x="149.5" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rWd-Hz-xzB" userLabel="DealerCard4">
+                                                <rect key="frame" x="224.5" y="0.0" width="74.5" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-qu-FeN" userLabel="DealerCard5">
+                                                <rect key="frame" x="299" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jdx-ys-FFb" userLabel="PlayerStack">
+                                        <rect key="frame" x="0.0" y="225" width="374" height="155"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWA-di-JJj" userLabel="PlayerCard1">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGU-8D-llc" userLabel="PlayerCard2">
+                                                <rect key="frame" x="75" y="0.0" width="74.5" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1n-o9-hff" userLabel="PlayerCard3">
+                                                <rect key="frame" x="149.5" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jaf-Ff-Zd3" userLabel="PlayerCard4">
+                                                <rect key="frame" x="224.5" y="0.0" width="74.5" height="155"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AnX-A6-SZI" userLabel="PlayerCard5">
+                                                <rect key="frame" x="299" y="0.0" width="75" height="155"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIF-NK-1Hy" userLabel="WinLose">
+                                <rect key="frame" x="120" y="15" width="174" height="60"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Money: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-R2-e2Y">
+                                <rect key="frame" x="10" y="844" width="115" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-lb-Ihb" userLabel="DealMeStack">
+                                <rect key="frame" x="20" y="596" width="374" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBT-cN-PoY" userLabel="Bet Amount Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="70"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Bet Amount: 0">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="20" name="Impact"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM2-lI-Ohc" userLabel="DealMeButton">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="70"/>
+                                        <state key="normal" title="Button" image="DealMeInButton"/>
+                                        <connections>
+                                            <action selector="DealMeInButton:" destination="pJh-rD-6WV" eventType="touchUpInside" id="MFW-Q5-KtM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5wz-JR-QaJ" userLabel="HitStayStack">
+                                <rect key="frame" x="60" y="502" width="294" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06a-88-jEQ" userLabel="Hit">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="75"/>
+                                        <state key="normal" title="Button" image="HitButton"/>
+                                        <connections>
+                                            <action selector="HitButton:" destination="pJh-rD-6WV" eventType="touchUpInside" id="wbI-Ib-gd3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-Xo-lAS" userLabel="Stay">
+                                        <rect key="frame" x="162" y="0.0" width="132" height="75"/>
+                                        <state key="normal" title="Button" image="StayButton"/>
+                                        <connections>
+                                            <action selector="StayButton:" destination="pJh-rD-6WV" eventType="touchUpInside" id="57M-rR-pfh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="g0x-mb-7QR" firstAttribute="top" secondItem="8GM-8E-ewa" secondAttribute="top" constant="80" id="2Xc-sq-eFT"/>
+                            <constraint firstItem="uWe-8h-6fI" firstAttribute="top" secondItem="uDO-Ub-CX6" secondAttribute="bottom" constant="5" id="6vY-KY-ewP"/>
+                            <constraint firstItem="g0x-mb-7QR" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="20" id="9QP-6V-L1o"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="yFd-AU-5rb" secondAttribute="trailing" constant="20" id="9xE-oM-s7e"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="bottom" secondItem="uWe-8h-6fI" secondAttribute="bottom" constant="40" id="AMK-A2-O4n"/>
+                            <constraint firstItem="yFd-AU-5rb" firstAttribute="bottom" secondItem="8GM-8E-ewa" secondAttribute="bottom" id="AMu-9d-uzm"/>
+                            <constraint firstItem="HIF-NK-1Hy" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="120" id="Bih-SX-fEL"/>
+                            <constraint firstItem="uDO-Ub-CX6" firstAttribute="top" secondItem="8GM-8E-ewa" secondAttribute="top" constant="630" id="E5d-wF-56C"/>
+                            <constraint firstItem="b2b-lb-Ihb" firstAttribute="top" secondItem="8GM-8E-ewa" secondAttribute="top" constant="550" id="EOY-DE-C36"/>
+                            <constraint firstItem="b2b-lb-Ihb" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="20" id="Gmm-2p-UY7"/>
+                            <constraint firstItem="cxa-R2-e2Y" firstAttribute="bottom" secondItem="8GM-8E-ewa" secondAttribute="bottom" id="HAM-Ed-lAr"/>
+                            <constraint firstItem="5wz-JR-QaJ" firstAttribute="top" secondItem="8GM-8E-ewa" secondAttribute="top" constant="460" id="HP4-E9-pmU"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="g0x-mb-7QR" secondAttribute="trailing" constant="20" id="J5h-vS-98E"/>
+                            <constraint firstItem="HIF-NK-1Hy" firstAttribute="centerX" secondItem="Vgo-6Z-xlC" secondAttribute="centerX" id="Kjd-l6-V4G"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="b2b-lb-Ihb" secondAttribute="trailing" constant="20" id="Lmj-GK-nRw"/>
+                            <constraint firstItem="5wz-JR-QaJ" firstAttribute="top" secondItem="g0x-mb-7QR" secondAttribute="bottom" constant="50" id="NwN-IT-E9n">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="HIF-NK-1Hy" secondAttribute="trailing" constant="120" id="OEZ-aj-ij9"/>
+                            <constraint firstItem="HIF-NK-1Hy" firstAttribute="top" secondItem="8GM-8E-ewa" secondAttribute="top" constant="15" id="OMJ-Sy-r1h"/>
+                            <constraint firstItem="uDO-Ub-CX6" firstAttribute="top" secondItem="b2b-lb-Ihb" secondAttribute="bottom" constant="10" id="OeV-Jd-6fI"/>
+                            <constraint firstItem="cxa-R2-e2Y" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="10" id="P6c-q6-4ci"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="uDO-Ub-CX6" secondAttribute="trailing" constant="45" id="Qa9-7J-xhE"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="5wz-JR-QaJ" secondAttribute="trailing" constant="60" id="SN9-YA-eeT"/>
+                            <constraint firstItem="b2b-lb-Ihb" firstAttribute="top" secondItem="5wz-JR-QaJ" secondAttribute="bottom" constant="15" id="d79-hY-POA"/>
+                            <constraint firstItem="uWe-8h-6fI" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="45" id="eWF-nm-qwO"/>
+                            <constraint firstItem="5wz-JR-QaJ" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="60" id="ek6-Lp-MPM"/>
+                            <constraint firstItem="uDO-Ub-CX6" firstAttribute="leading" secondItem="8GM-8E-ewa" secondAttribute="leading" constant="45" id="fRg-J6-Lkf"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="trailing" secondItem="uWe-8h-6fI" secondAttribute="trailing" constant="45" id="iL9-gK-jTy"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="bottom" secondItem="g0x-mb-7QR" secondAttribute="bottom" constant="2800" id="nvO-MF-hCr"/>
+                            <constraint firstItem="g0x-mb-7QR" firstAttribute="top" secondItem="HIF-NK-1Hy" secondAttribute="bottom" constant="5" id="sxU-JW-tyF"/>
+                            <constraint firstItem="uDO-Ub-CX6" firstAttribute="centerX" secondItem="Vgo-6Z-xlC" secondAttribute="centerX" id="wM4-Xp-iLn"/>
+                            <constraint firstItem="8GM-8E-ewa" firstAttribute="bottom" secondItem="uDO-Ub-CX6" secondAttribute="bottom" constant="110" id="zE5-l3-vhp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8GM-8E-ewa"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nvO-MF-hCr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="nvO-MF-hCr"/>
+                                <exclude reference="2Xc-sq-eFT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="39u-Gq-Jec"/>
+                    <connections>
+                        <outlet property="BetAmountLabel" destination="TBT-cN-PoY" id="Eoh-hM-TR9"/>
+                        <outlet property="DealerCard1" destination="CK3-Fr-TnU" id="dYR-zc-zoG"/>
+                        <outlet property="DealerCard2" destination="qwD-to-bde" id="LMO-Uf-Ch0"/>
+                        <outlet property="DealerCard3" destination="cRx-IZ-1Es" id="mKH-y1-fOP"/>
+                        <outlet property="DealerCard4" destination="rWd-Hz-xzB" id="gia-Fc-hF3"/>
+                        <outlet property="DealerCard5" destination="rhB-qu-FeN" id="bff-9X-Dyy"/>
+                        <outlet property="PlayerCard1" destination="HWA-di-JJj" id="Q6V-11-rnJ"/>
+                        <outlet property="PlayerCard2" destination="mGU-8D-llc" id="e49-4w-TQL"/>
+                        <outlet property="PlayerCard3" destination="b1n-o9-hff" id="J4g-Fm-wJn"/>
+                        <outlet property="PlayerCard4" destination="jaf-Ff-Zd3" id="ve0-rb-jBu"/>
+                        <outlet property="PlayerCard5" destination="AnX-A6-SZI" id="2Zm-Ix-gcp"/>
+                        <outlet property="UserTotalLabel" destination="cxa-R2-e2Y" id="jqr-8K-pti"/>
+                        <outlet property="WinLoseLabel" destination="HIF-NK-1Hy" id="yeI-Qs-rbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ORL-BV-BYJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="93.103448275862078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BlackJack Logo" width="454" height="128"/>
+        <image name="DealMeInButton" width="338" height="108"/>
+        <image name="EnterButton" width="129" height="69"/>
+        <image name="HitButton" width="172" height="106"/>
+        <image name="ResetButton" width="163" height="73"/>
+        <image name="StayButton" width="185" height="101"/>
+        <image name="bet1" width="1011" height="984"/>
+        <image name="bet10" width="1011" height="984"/>
+        <image name="bet100" width="1011" height="984"/>
+        <image name="bet20" width="1011" height="984"/>
+        <image name="bet5" width="1011" height="984"/>
+        <image name="bet50" width="1011" height="984"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Cs9-cB-JpP"/>
+    </inferredMetricsTieBreakers>
+</document>
